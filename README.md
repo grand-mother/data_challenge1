@@ -1,19 +1,17 @@
-# Data Challenge 1
-
+# Data Challenges
 
 ## The **Main Objective** of the Data Challenges:
 
-Prepare the full simulation and data analysis chain for UHECR/UHEnu.
-
+Prepare the full simulation and data analysis chain for UHECR/UHEnu within GRAND.
 
 ## **Specific Objectives** of the data challenge:
 
-* Tune & validate the ROOT data format, ZHAireS to ROOT conversion
+* Tune & validate the ROOT data format, simulation to ROOT conversion
 * Add ROOT input/output to the electronic chain
 * Identify what is missing in GRANDlib
 * Document the simulation and data analysis chain and the interfaces
 
-As the code you will produce during the data challenge may be included in the grandlib, it is highly recommanded that the code writing standard of grandlib are followed. These are presented here [].
+As the code you will produce during the data challenge may be included in the grandlib, it is highly recommanded that the [general](https://indico.in2p3.fr/event/25301/sessions/16114/attachments/68207/95788/pres_code_quality_general.pdf) and [specific](https://indico.in2p3.fr/event/25301/sessions/16114/attachments/68207/95787/pres_code_quality_grand.pdf) code writing standard of grandlib are followed.
 
 
 ## Rules of the game:
@@ -21,7 +19,7 @@ As the code you will produce during the data challenge may be included in the gr
 * You may work alone or in teams
 * Each team produces in principle an independent code, but communication among teams and code sharing is encouraged
 * Progress will be discussed during soft meetings and through direct exchanges (for example, on GitHub)
-* Tentative deadline for DC1 is early September, and the next GRAND meeting for DC2 (Nijmegen, late October / early November or early January). 
+* Tentative deadline for DC1 is early September, and the next GRAND meeting for DC2 (Nijmegen, late October / early November or early January).
 * After the DCs are completed, the various codes will be evaluated and we will work towards the unification of the production of a standard / official GRANDlib code
 * Parameters for code evaluation will be:
     * Validity of the results produced
@@ -36,25 +34,23 @@ As the code you will produce during the data challenge may be included in the gr
 
 ***Produce ADC traces from ROOT files with Efield.***
 
-**Objectives:**
-
-* Use the same antenna response; files: [EW](https://github.com/grand-mother/store/releases/download/101/GP300Antenna_Ewarm_leff.npy)
-[SN](https://github.com/grand-mother/store/releases/download/101/GP300Antenna_Snarm_leff.npy)
-[Z](https://github.com/grand-mother/store/releases/download/101/GP300Antenna_Zarm_leff.npy)
-* Use the same electronics response; [script for direct ZHAireS output](https://github.com/grand-mother/grand/blob/dev/scripts/grand_simu_trace2du.py) (needs to be made to read ROOT files)
-* Use the same noise model; [script for direct ZHAireS output](https://github.com/grand-mother/grand/blob/dev/scripts/grand_simu_trace2du.py) (needs to be made to read ROOT files)
-* All three need to be plugable (inputs to the routine, or a config file?)
-* Use the GRANDlib ROOT TTrees interface (to be documented, but reading/writing examples are [here](https://github.com/grand-mother/grand/tree/dev_io_root/examples/io))
-
 **Inputs:**
 
 - an antenna response file
 - an electronics response module
 - Efield [traces](https://github.com/grand-mother/data_challenge1/tree/main/coarse_subei_traces_root) at the antenna feed point in the ROOT format
 
-**condition:** add the noise in a plugable way
-
 **Output:**	Two ROOT files, created using GRANDlib ROOT interfaces, containing clean and noisy ADC traces
+
+**Prerequisites:**
+
+* Use the following antenna response files (***<u>description of use needed</u>***): [EW](https://github.com/grand-mother/store/releases/download/101/GP300Antenna_Ewarm_leff.npy)
+[SN](https://github.com/grand-mother/store/releases/download/101/GP300Antenna_Snarm_leff.npy)
+[Z](https://github.com/grand-mother/store/releases/download/101/GP300Antenna_Zarm_leff.npy)
+* Use the following electronics response and noise model; [script for direct ZHAireS output](https://github.com/grand-mother/grand/blob/dev/scripts/grand_simu_trace2du.py) (needs to be made to read ROOT files)
+* All parts (antenna response, noise model, etc.) need to be plugable (inputs to the routine, or a config file?)
+* Use the GRANDlib ROOT TTrees interface (to be documented, but reading/writing examples are [here](https://github.com/grand-mother/grand/tree/dev_io_root/examples/io))
+
 
 
 ## Pre-Data Challenge:
@@ -63,15 +59,16 @@ As the code you will produce during the data challenge may be included in the gr
 * Use the [ZHAireSInputGenerator.py](https://github.com/grand-mother/data_challenge1/blob/main/ZHAireSInputGenerator.py) to generate input
 * Use [ZHAireS](https://github.com/mjtueros/ZHAireS-Python) to generate traces from the input
 * Use [ZHAireSRawToGRANDROOT.py](https://github.com/grand-mother/grand/blob/dev_io_root/examples/io/ZHAireSRawToGRANDROOT.py) to convert traces to the ROOT format (this is in dev_io_root branch, not the master yet)
+* *Same should be repeated for CoREAS when the CoREAS to ROOT script is ready*
 
 ## Deadline
 
-Somewhere in early September 2022.
+Some time in early September 2022 (to be refined later depending on progress).
 
 ## Discussion
 
 * For specific bugs/issues, please use this repository's Issues function.
-* For more general discussion, please use (SLACK or Github discussion?)
+* For more general discussion, please use [Github Discussions](https://github.com/grand-mother/data_challenge1/discussions)
 * For ROOT format and GRANDlib interfaces to it ask Lech Piotrowski
 * For ZHAireS ask Matias Tueros
 
