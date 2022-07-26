@@ -11,7 +11,7 @@ Prepare the full simulation and data analysis chain for UHECR/UHEnu within GRAND
 * Identify what is missing in GRANDlib
 * Document the simulation and data analysis chain and the interfaces
 
-As the code you will produce during the data challenge may be included in the grandlib, it is highly recommanded that the [general](https://indico.in2p3.fr/event/25301/sessions/16114/attachments/68207/95788/pres_code_quality_general.pdf) and [specific](https://indico.in2p3.fr/event/25301/sessions/16114/attachments/68207/95787/pres_code_quality_grand.pdf) code writing standard of grandlib are followed.
+As the code you will produce during the data challenge may be included in the grandlib, it is highly recommanded that the [general](https://github.com/grand-mother/data_challenge1/blob/main/Pres_code_quality_general.pdf) and [grand specific](https://github.com/grand-mother/data_challenge1/blob/main/Pres_code_quality_grand.pdf) code writing standard of grandlib are followed.
 
 
 ## Rules of the game:
