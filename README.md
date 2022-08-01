@@ -49,7 +49,7 @@ As the code you will produce during the data challenge may be included in the gr
 [Z](https://github.com/grand-mother/store/releases/download/101/GP300Antenna_Zarm_leff.npy)
 * Use the following electronics response and noise model; [script for direct ZHAireS output](https://github.com/grand-mother/grand/blob/dev/scripts/grand_simu_trace2du.py) (needs to be made to read ROOT files)
 * All parts (antenna response, noise model, etc.) need to be plugable (inputs to the routine, or a config file?)
-* Use the GRANDlib ROOT TTrees interface (to be documented, but reading/writing examples are [here](https://github.com/grand-mother/grand/tree/dev_io_root/examples/io))
+* Use the GRANDlib ROOT TTrees interface (documented [here](http://grand.fuw.edu.pl/data_oriented_api))
 
 
 
@@ -58,7 +58,7 @@ As the code you will produce during the data challenge may be included in the gr
 
 * Use the [ZHAireSInputGenerator.py](https://github.com/grand-mother/data_challenge1/blob/main/ZHAireSInputGenerator.py) to generate input
 * Use [ZHAireS](https://github.com/mjtueros/ZHAireS-Python) to generate traces from the input
-* Use [ZHAireSRawToGRANDROOT.py](https://github.com/grand-mother/grand/blob/dev_io_root/examples/io/ZHAireSRawToGRANDROOT.py) to convert traces to the ROOT format (this is in dev_io_root branch, not the master yet)
+* Use [ZHAireSRawToGRANDROOT.py](https://github.com/grand-mother/data_challenge1/blob/main/ZHAireSRawToGRANDROOT.py) to convert traces to the ROOT format (the one in dev_io_root branch is not yet updated)
 * *Same should be repeated for CoREAS when the CoREAS to ROOT script is ready*
 
 ## Deadline
