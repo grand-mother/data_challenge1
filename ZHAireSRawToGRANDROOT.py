@@ -17,8 +17,8 @@ logging.basicConfig(level=logging.DEBUG)
 sys.path.append("/home/mjtueros/GRAND/ROOTFileFormat/DataChallenge/grandgithub/grand/grand/io")
 import AiresInfoFunctionsGRANDROOT as AiresInfo
 import ZHAireSInputGenerator as ZHAireSGen
-#from grand.io.root_trees import *
-from root_trees import *
+from grand.io.root_trees import *
+#from root_trees import *
 from copy import deepcopy
 logging.basicConfig(level=logging.INFO)	
 logging.getLogger('matplotlib').setLevel(logging.ERROR)
