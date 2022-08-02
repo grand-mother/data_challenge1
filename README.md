@@ -49,7 +49,7 @@ As the code you will produce during the data challenge may be included in the gr
 [Z](https://github.com/grand-mother/store/releases/download/101/GP300Antenna_Zarm_leff.npy)
 * Use the following electronics response and noise model; [script for direct ZHAireS output](https://github.com/grand-mother/grand/blob/dev/scripts/grand_simu_trace2du.py) (needs to be made to read ROOT files)
 * All parts (antenna response, noise model, etc.) need to be plugable (inputs to the routine, or a config file?)
-* Use the GRANDlib ROOT TTrees interface (documented [here](http://grand.fuw.edu.pl/data_oriented_api))
+* Use the GRANDlib ROOT TTrees interface (documented [here](http://grand.fuw.edu.pl/data_oriented_api), l: grand, p: uhenuuhecr)
 
 
 
